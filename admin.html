@@ -1,27 +1,203 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Nixx VVIP Store</title>
-    <meta name="description" content="Nixx VVIP Store — Official NIXX VIP license store." />
-    <meta name="robots" content="index, follow" />
-    <meta property="og:title" content="Nixx VVIP Store" />
-    <meta property="og:description" content="Nixx VVIP Store — Official NIXX VIP license store." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Nixx VVIP Store" />
-    <meta name="twitter:description" content="Nixx VVIP Store — Official NIXX VIP license store." />
-    <link rel="icon" type="image/svg+xml" href="/assets/ncl-favicon.png?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="module" crossorigin src="/assets/index-pZUgGJPX.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DODuK8Z4.css">
-    <link rel="stylesheet" href="/feature-overrides.css">
-    <script defer src="/features.js"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>NIXX VIP — Admin Panel</title>
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./admin.js"></script>
+  <style>
+    .admin-login-screen{min-height:100vh;display:grid;place-items:center;padding:24px}.admin-login{width:min(440px,100%);padding:34px;border:1px solid rgba(141,255,194,.25);border-radius:28px;background:rgba(10,15,20,.88);box-shadow:0 30px 100px rgba(0,0,0,.45);backdrop-filter:blur(20px)}
+    .admin-login h1{font-size:clamp(36px,8vw,58px);margin:10px 0}.admin-login p{color:var(--muted);line-height:1.7}.login-error{min-height:20px;margin-top:10px;color:#ff8798;font-size:12px}.admin-app{display:grid;grid-template-columns:250px minmax(0,1fr);min-height:100vh;width:min(1500px,100%);margin:auto}.admin-sidebar{position:sticky;top:0;height:100vh;padding:24px 16px;border-right:1px solid var(--line);background:rgba(8,12,17,.78);backdrop-filter:blur(18px);display:flex;flex-direction:column;gap:18px}.admin-brand{display:flex;align-items:center;gap:10px;padding:10px 12px;color:var(--text);text-decoration:none}.admin-brand .brand-symbol{display:grid;place-items:center;width:38px;height:38px;border-radius:12px;background:rgba(141,255,194,.1);color:var(--green);font-weight:900}.admin-brand small{display:block;color:var(--muted);font-size:9px;letter-spacing:.12em;margin-top:3px}.admin-nav{display:grid;gap:7px}.admin-nav button{width:100%;border:1px solid transparent;background:transparent;color:var(--muted);padding:12px 13px;border-radius:13px;text-align:left;cursor:pointer;font:600 12px inherit}.admin-nav button:hover,.admin-nav button.active{color:var(--text);background:rgba(141,255,194,.08);border-color:rgba(141,255,194,.13)}.admin-nav .nav-icon{display:inline-block;width:22px}.sidebar-spacer{flex:1}.admin-user{padding:13px;border:1px solid var(--line);border-radius:15px;background:rgba(255,255,255,.025)}.admin-user b{display:block;font-size:12px}.admin-user small{color:var(--muted);font-size:10px}.admin-main{padding:38px;min-width:0}.admin-page{max-width:1100px;margin:0 auto}.admin-page[hidden]{display:none!important}.page-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.page-heading h1{margin:6px 0;font-size:clamp(34px,5vw,58px)}.page-heading>.button{margin:0}.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.stat-card{padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--panel)}.stat-card span{font-size:9px;color:var(--muted);letter-spacing:.14em}.stat-card strong{display:block;font-size:34px;margin:8px 0 3px;color:var(--green)}.stat-card small{color:var(--muted)}.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.dashboard-grid .admin-card{margin-top:14px}.session-box{display:flex;justify-content:space-between;gap:10px;padding:14px;border:1px solid rgba(141,255,194,.15);border-radius:13px;margin-top:18px}.session-box span{color:var(--green);font-size:11px}.security-row{display:flex;align-items:center;gap:24px;flex-wrap:wrap;margin-top:18px}.security-row>div{min-width:130px}.security-row small{display:block;color:var(--muted);font-size:10px}.security-row b{font-size:13px}.mobile-menu{display:none}.admin-page>.admin-card{margin-top:0}.admin-page>.admin-card+.admin-card{margin-top:20px}.admin-page .key-manager{margin-top:20px}@media(max-width:900px){.admin-app{grid-template-columns:1fr}.admin-sidebar{position:fixed;z-index:100;left:0;top:0;bottom:0;width:280px;transform:translateX(-102%);transition:.25s ease}.admin-sidebar.open{transform:none}.admin-main{padding:82px 18px 30px}.mobile-menu{display:flex;position:fixed;z-index:110;top:16px;left:16px}.stat-grid{grid-template-columns:repeat(2,1fr)}.dashboard-grid{grid-template-columns:1fr}.page-heading{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.stat-grid{grid-template-columns:1fr 1fr}.admin-login{padding:26px}.admin-main{padding-left:14px;padding-right:14px}}
+  </style>
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div><div class="orb orb-one" aria-hidden="true"></div>
+  <section id="loginScreen" class="admin-login-screen">
+    <form id="loginForm" class="admin-login">
+      <a class="brand" href="./index.html"><span class="brand-symbol">ϟ</span><span><b>NIXX</b><small>ADMIN PANEL</small></span></a>
+      <span class="section-number">PRIVATE ACCESS</span>
+      <h1>Admin Login</h1>
+      <p>Masukkan <b>ADMIN_TOKEN</b> untuk membuka panel. Token diverifikasi langsung ke API dan tidak disimpan permanen.</p>
+      <label for="loginToken">Admin token</label><input id="loginToken" type="password" placeholder="Masukkan admin token" autocomplete="current-password" required>
+      <button class="button button-primary button-full" type="submit" id="loginButton">Masuk ke Admin Panel ↗</button>
+      <div id="loginError" class="login-error"></div>
+    </form>
+  </section>
+
+  <div id="adminApp" class="admin-app" hidden>
+    <button class="button mobile-menu" id="mobileMenu" type="button">☰</button>
+    <aside id="adminSidebar" class="admin-sidebar">
+      <a class="admin-brand" href="./index.html"><span class="brand-symbol">ϟ</span><span><b>NIXX VIP</b><small>ADMIN CONTROL</small></span></a>
+      <nav class="admin-nav" aria-label="Admin navigation">
+        <button data-page-target="dashboard" class="active"><span class="nav-icon">⌂</span>Dashboard</button>
+        <button data-page-target="generate"><span class="nav-icon">＋</span>Generate Key</button>
+        <button data-page-target="licenses"><span class="nav-icon">▣</span>License Database</button>
+        <button data-page-target="announcement"><span class="nav-icon">!</span>Announcement</button>
+        <button data-page-target="products"><span class="nav-icon">◆</span>Products</button>
+        <button data-page-target="scripts"><span class="nav-icon">◈</span>Script Library</button>
+        <button data-page-target="settings"><span class="nav-icon">⚙</span>Settings</button>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <div class="admin-user"><b>ADMIN</b><small>Authenticated session</small></div>
+      <button class="button button-danger button-full" id="sidebarLogout" type="button">Logout</button>
+    </aside>
+    <main class="admin-main">
+      <section class="admin-page" data-page="dashboard">
+        <div class="page-heading"><div><span class="section-number">NIXX VIP CONTROL</span><h1>Dashboard</h1><p class="admin-muted">Ringkasan cepat sistem dan database admin.</p></div><button class="button" id="dashboardRefresh" type="button">↻ Refresh</button></div>
+        <div class="stat-grid">
+          <article class="stat-card"><span>LICENSE</span><strong id="statLicenses">—</strong><small>Total license</small></article>
+          <article class="stat-card"><span>ACTIVE</span><strong id="statActive">—</strong><small>License aktif</small></article>
+          <article class="stat-card"><span>PRODUCT</span><strong id="statProducts">—</strong><small>Produk manual</small></article>
+          <article class="stat-card"><span>SCRIPT</span><strong id="statScripts">—</strong><small>Script store</small></article>
+        </div>
+        <div class="dashboard-grid">
+          <section class="admin-card"><span class="section-number">ACCESS</span><h2>Admin session</h2><p class="admin-muted">Token aktif tersimpan hanya selama session browser ini.</p><div class="session-box"><b id="sessionRole">ADMIN</b><span>Authenticated</span></div></section>
+          <section class="admin-card"><span class="section-number">ANNOUNCEMENT</span><h2>Status banner</h2><p id="dashboardAnnouncement" class="admin-muted">Memuat...</p></section>
+        </div>
+      </section>
+      <section class="admin-page" data-page="generate" >
+        <div class="page-heading"><div><span class="section-number">ADMIN PANEL</span><h1>Generate Key</h1><p class="admin-muted">Kelola bagian generate key dari sidebar.</p></div></div>
+    <section class="admin-card">
+      <span class="section-number">PRIVATE ADMIN AREA</span>
+      <h1>Generate license key</h1>
+      <p class="admin-muted">
+        Buat key setelah pembayaran pembeli terverifikasi.
+        Masa aktif mulai dihitung saat key pertama kali digunakan.
+      </p>
+
+      <form id="issueForm">
+        <input id="adminToken" type="hidden">
+        <p id="roleBadge" class="admin-muted" style="margin-top:8px">Role: ADMIN</p>
+
+        <label for="customer">Nama / username pembeli</label>
+        <input id="customer" placeholder="Contoh: username-pembeli" required>
+
+        <label for="days">Masa aktif</label>
+        <select id="days">
+          <option value="1">1 Hari</option>
+          <option value="3">3 Hari</option>
+          <option value="7" selected>7 Hari</option>
+          <option value="30">30 Hari</option>
+        </select>
+
+        <button class="button button-primary button-full" type="submit">Generate Key ↗</button>
+      </form>
+
+      <div class="admin-result" id="result" hidden>
+        <span class="section-number">KEY GENERATED</span>
+        <strong id="generatedKey"></strong>
+        <div class="result-actions">
+          <button class="button button-primary" id="copyKey" type="button">Copy key</button>
+          <a class="button" id="sendWhatsapp" target="_blank" rel="noreferrer">Discord ↗</a>
+        </div>
+      </div>
+
+      <p class="admin-warning">Admin dapat generate, lihat, delete, dan mengatur announcement. Reseller hanya dapat generate dan melihat key reseller. Jangan bagikan token.</p>
+    </section>
+      </section>
+      <section class="admin-page" data-page="licenses" hidden>
+        <div class="page-heading"><div><span class="section-number">ADMIN PANEL</span><h1>License Database</h1><p class="admin-muted">Kelola bagian license database dari sidebar.</p></div></div>
+    <section class="admin-card key-manager">
+      <div class="manager-head">
+        <div>
+          <span class="section-number">LICENSE DATABASE</span>
+          <h2>Daftar semua key</h2>
+          <p class="admin-muted">
+            Lihat semua license yang sudah dibuat dan hapus key yang tidak diperlukan.
+          </p>
+        </div>
+        <div class="manager-tools">
+          <button class="button" id="refreshKeys" type="button">↻ Refresh</button>
+        </div>
+      </div>
+
+      <div class="key-list" id="licenseList">
+        <div class="empty-key">Masukkan admin token lalu tekan Refresh.</div>
+      </div>
+    </section>
+      </section>
+      <section class="admin-page" data-page="announcement" hidden>
+        <div class="page-heading"><div><span class="section-number">ADMIN PANEL</span><h1>Announcement</h1><p class="admin-muted">Kelola bagian announcement dari sidebar.</p></div></div>
+    <section class="admin-card key-manager">
+      <div class="manager-head">
+        <div><span class="section-number">SITE CONTROL</span><h2>Announcement</h2><p class="admin-muted">Tampilkan banner pengumuman di halaman utama NixxVIP.</p></div>
+      </div>
+      <form id="announcementForm">
+        <label for="announcementText">Pesan</label>
+        <input id="announcementText" maxlength="300" placeholder="Contoh: Maintenance malam ini pukul 23.00 WIB">
+        <label for="announcementType">Tipe</label>
+        <select id="announcementType"><option value="info">Info</option><option value="success">Success</option><option value="warning">Warning</option><option value="danger">Danger</option></select>
+        <label style="display:flex;gap:8px;align-items:center;margin-top:12px"><input id="announcementEnabled" type="checkbox" style="width:auto"> Aktifkan banner</label>
+        <button class="button button-primary button-full" type="submit">Simpan Announcement</button>
+        <p id="announcementStatus" class="admin-muted"></p>
+      </form>
+    </section>
+      </section>
+      <section class="admin-page" data-page="products" hidden>
+        <div class="page-heading"><div><span class="section-number">ADMIN PANEL</span><h1>Product Manager</h1><p class="admin-muted">Kelola bagian product manager dari sidebar.</p></div></div>
+    <section class="admin-card key-manager">
+      <div class="manager-head">
+        <div><span class="section-number">PRODUCT MANAGER</span><h2>Tambah Produk Sendiri</h2><p class="admin-muted">Isi produk secara manual. Setelah dipublish, produk langsung muncul rapi di halaman utama tanpa edit index.html.</p></div>
+      </div>
+      <form id="productUploadForm">
+        <label for="productTitle">Nama produk</label>
+        <input id="productTitle" maxlength="80" placeholder="Contoh: NIXXTEAM Blade Spin" required>
+        <label for="productPrice">Harga</label>
+        <input id="productPrice" maxlength="40" placeholder="Contoh: Rp25.000" required>
+        <label for="productBadge">Label kecil</label>
+        <input id="productBadge" maxlength="40" placeholder="Contoh: SCRIPT ROBLOX">
+        <label for="productDescription">Deskripsi</label>
+        <textarea id="productDescription" maxlength="400" rows="3" placeholder="Deskripsi singkat produk..."></textarea>
+        <label for="productFeatures">Fitur / isi produk</label>
+        <textarea id="productFeatures" rows="5" placeholder="Satu fitur per baris&#10;Akses 1 hari&#10;Support update&#10;Premium feature"></textarea>
+        <label for="productOrderLabel">Teks tombol</label>
+        <input id="productOrderLabel" maxlength="30" value="Beli / Tanya" placeholder="Beli / Tanya">
+        <label for="productImage">Gambar produk (opsional)</label>
+        <input id="productImage" type="file" accept="image/jpeg,.jpg,.jpeg,image/png,.png,image/webp,.webp">
+        <img id="productImagePreview" alt="Preview produk" hidden style="width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.12);margin-top:8px">
+        <button class="button button-primary button-full" type="submit">Publish Produk ↗</button>
+        <p id="productUploadStatus" class="admin-muted"></p>
+      </form>
+
+      <div class="manager-head" style="margin-top:28px">
+        <div><span class="section-number">PUBLISHED PRODUCTS</span><h2>Produk yang sudah dipasang</h2></div>
+        <div class="manager-tools"><button class="button" id="refreshProducts" type="button">↻ Refresh</button></div>
+      </div>
+      <div class="key-list" id="productAdminList"><div class="empty-key">Belum memuat produk.</div></div>
+    </section>
+      </section>
+      <section class="admin-page" data-page="scripts" hidden>
+        <div class="page-heading"><div><span class="section-number">ADMIN PANEL</span><h1>Script Library</h1><p class="admin-muted">Kelola bagian script library dari sidebar.</p></div></div>
+    <section class="admin-card key-manager">
+      <div class="manager-head">
+        <div><span class="section-number">SCRIPT LIBRARY</span><h2>Upload Script Promosi</h2><p class="admin-muted">Buat produk script seperti store: cover JPG, nama, versi, kategori, deskripsi, dan file Lua/TXT. Setelah dipublish, produk muncul otomatis di Script Store.</p></div>
+      </div>
+      <form id="scriptUploadForm">
+        <label for="scriptTitle">Nama script</label>
+        <input id="scriptTitle" maxlength="80" placeholder="Contoh: Blade Spin NIXXTEAM" required>
+        <label for="scriptVersion">Versi</label>
+        <input id="scriptVersion" maxlength="30" placeholder="v2.0">
+        <label for="scriptDescription">Deskripsi promosi</label>
+        <input id="scriptDescription" maxlength="240" placeholder="Script premium dengan fitur lengkap...">
+        <label for="scriptCategory">Kategori</label>
+        <input id="scriptCategory" maxlength="40" placeholder="Contoh: Blade Spin / Roblox">
+        <label style="display:flex;gap:8px;align-items:center;margin-top:12px"><input id="scriptFeatured" type="checkbox" style="width:auto"> Tampilkan sebagai script unggulan</label>
+        <label for="scriptCover">Cover JPG</label>
+        <input id="scriptCover" type="file" accept="image/jpeg,.jpg,.jpeg" required>
+        <img id="scriptCoverPreview" alt="Preview cover" hidden style="width:100%;max-width:520px;aspect-ratio:16/9;object-fit:cover;border-radius:16px;border:1px solid rgba(255,255,255,.12);margin-top:8px">
+        <label for="scriptFile">File script (.lua / .txt)</label>
+        <input id="scriptFile" type="file" accept=".lua,.txt,text/plain" required>
+        <button class="button button-primary button-full" type="submit">Publish Script ↗</button>
+        <p id="scriptUploadStatus" class="admin-muted"></p>
+      </form>
+    </section>
+      </section>
+      <section class="admin-page" data-page="settings" hidden>
+        <div class="page-heading"><div><span class="section-number">SYSTEM</span><h1>Settings</h1><p class="admin-muted">Pengaturan session admin dan akses panel.</p></div></div>
+        <section class="admin-card"><span class="section-number">SECURITY</span><h2>Admin Access</h2><p class="admin-muted">Admin token tidak ditampilkan kembali dan tidak disimpan permanen di localStorage.</p><div class="security-row"><div><small>Role</small><b>ADMIN</b></div><div><small>Session</small><b id="settingsSession">Active</b></div><button class="button button-danger" id="logoutBtn" type="button">Logout</button></div></section>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
